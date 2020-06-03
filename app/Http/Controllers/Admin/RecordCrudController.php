@@ -24,6 +24,9 @@ class RecordCrudController extends CrudController
         $this->crud->setModel('App\Models\Record');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/record');
         $this->crud->setEntityNameStrings('Giao dịch', 'Giao dịch');
+        $this->crud->denyAccess('edit');
+        $this->crud->denyAccess('create');
+        $this->crud->denyAccess('delete');
     }
 
     protected function setupListOperation()
@@ -66,10 +69,6 @@ class RecordCrudController extends CrudController
 
 
         ]);
-
-        $this->crud->denyAccess('edit');
-        $this->crud->denyAccess('create');
-        $this->crud->denyAccess('delete');
     }
 
     protected function setupCreateOperation()
