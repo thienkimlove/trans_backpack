@@ -40,10 +40,7 @@ class CustomerRequest extends FormRequest
     public function attributes()
     {
         return [
-            'name.required' => 'Bạn chưa nhập tên khách hàng',
-            'code.unique' => 'Mã khách hàng phải không trùng lặp với mã khách hàng khác đã có trong hệ thống',
-            'code.min' => 'Mã khách hàng phải có độ dài lớn hơn 2',
-            'code.max' => 'Mã khách hàng phải có độ dài nhỏ hơn 30',
+
         ];
     }
 
@@ -55,7 +52,10 @@ class CustomerRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'name.required' => 'Bạn chưa nhập tên khách hàng',
+            'code.unique' => 'Mã khách hàng phải không trùng lặp với mã khách hàng khác đã có trong hệ thống',
+            'code.min' => 'Mã khách hàng phải có độ dài lớn hơn 2',
+            'code.max' => 'Mã khách hàng phải có độ dài nhỏ hơn 30',
         ];
     }
 }

@@ -41,15 +41,7 @@ class MachineRequest extends FormRequest
     public function attributes()
     {
         return [
-            'bank_id.required' => 'Bạn chưa chọn ngân hàng cho máy POS',
 
-            'fee_percent_per_trans.required' => 'Bạn chưa nhập phí giao dịch (%)',
-            'fee_percent_per_trans.min' => 'Phí giao dịch (%) phải lớn hơn 0',
-            'fee_percent_per_trans.max' => 'Phí giao dịch (%) phải nhở hơn 100',
-
-            'code.unique' => 'Mã máy POS phải không trùng lặp với mã máy khác đã có trong hệ thống',
-            'code.min' => 'Mã máy POS phải có độ dài lớn hơn 2',
-            'code.max' => 'Mã máy POS phải có độ dài nhỏ hơn 30',
         ];
     }
 
@@ -61,7 +53,15 @@ class MachineRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'bank_id.required' => 'Bạn chưa chọn ngân hàng cho máy POS',
+
+            'fee_percent_per_trans.required' => 'Bạn chưa nhập phí giao dịch (%)',
+            'fee_percent_per_trans.min' => 'Phí giao dịch (%) phải lớn hơn 0',
+            'fee_percent_per_trans.max' => 'Phí giao dịch (%) phải nhở hơn 100',
+
+            'code.unique' => 'Mã máy POS phải không trùng lặp với mã máy khác đã có trong hệ thống',
+            'code.min' => 'Mã máy POS phải có độ dài lớn hơn 2',
+            'code.max' => 'Mã máy POS phải có độ dài nhỏ hơn 30',
         ];
     }
 }
